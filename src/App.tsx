@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GetInput from "./components/GetInput";
+import Grid from "./components/Grid";
 
 function App() {
   const [needValue, setNeedValue] = useState(true);
@@ -36,12 +37,13 @@ function App() {
       ) : (
         <>
           <p style={{ fontSize: 40 }}>{size}</p>
-          {res.map((column) => {
+          {/* {res.map((column) => {
             let strings = column.map((i) => {
               return spaceChar(i.toString(), (size * size).toString().length);
             });
             return <p>{strings.join(" ")}</p>;
-          })}
+          })} */}
+          <Grid data={res}></Grid>
         </>
       )}
     </>
