@@ -7,11 +7,11 @@ interface Props {
 export default function Grid({ data }: Props) {
   return (
     <div className="grid-container">
-      {data.map((row) => {
+      {data.map((row, i) => {
         return (
           <div className="grid-row">
-            {row.map((cell) => {
-              return <div className="grid-cell">{cell.toString()}</div>;
+            {row.map((cell, j) => {
+              return <div className="grid-cell">{cell}</div>;
             })}
           </div>
         );

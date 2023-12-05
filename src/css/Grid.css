@@ -1,10 +1,10 @@
 .grid-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Set flex-direction to column */
 }
 
 .grid-row {
-  display: block;
+  display: flex; /* Each row will be a flex container */
 }
 
 .grid-cell {
