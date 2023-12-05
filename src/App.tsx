@@ -23,13 +23,6 @@ function App() {
     return result;
   };
 
-  const spaceChar = (ch: string, target: number) => {
-    while (ch.length < target) {
-      ch += "\u00A0";
-    }
-    return ch;
-  };
-
   return (
     <>
       {needValue ? (
@@ -37,12 +30,6 @@ function App() {
       ) : (
         <>
           <p style={{ fontSize: 40, color: "rgb(165, 114, 165)" }}>{size}</p>
-          {/* {res.map((column) => {
-            let strings = column.map((i) => {
-              return spaceChar(i.toString(), (size * size).toString().length);
-            });
-            return <p>{strings.join(" ")}</p>;
-          })} */}
           <Grid data={res}></Grid>
         </>
       )}
