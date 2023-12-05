@@ -36,7 +36,7 @@ function App() {
         <GetInput onSubmit={handleSubmit}></GetInput>
       ) : (
         <>
-          <p style={{ fontSize: 40 }}>{size}</p>
+          <p style={{ fontSize: 40, color: "rgb(165, 114, 165)" }}>{size}</p>
           {/* {res.map((column) => {
             let strings = column.map((i) => {
               return spaceChar(i.toString(), (size * size).toString().length);

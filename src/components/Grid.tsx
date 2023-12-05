@@ -9,9 +9,13 @@ export default function Grid({ data }: Props) {
     <div className="grid-container">
       {data.map((row, i) => {
         return (
-          <div className="grid-row">
+          <div className={`grid-row${i === 0 && " first"}`}>
             {row.map((cell, j) => {
-              return <div className="grid-cell">{data.length * i + j + 1}</div>;
+              return (
+                <div className={`grid-cell${j == 0 ? " first" : ""}`}>
+                  {cell}
+                </div>
+              );
             })}
           </div>
         );

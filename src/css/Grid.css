@@ -16,3 +16,8 @@
   justify-content: center;
   align-items: center;
 }
+
+.first {
+  color: rgb(165, 114, 165);
+  font-weight: bold;
+}
