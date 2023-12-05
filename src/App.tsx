@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GetInput from "./components/GetInput";
+import Grid from "./components/Grid";
 
 function App() {
   const [needValue, setNeedValue] = useState(true);
@@ -22,26 +23,14 @@ function App() {
     return result;
   };
 
-  const spaceChar = (ch: string, target: number) => {
-    while (ch.length < target) {
-      ch += "\u00A0";
-    }
-    return ch;
-  };
-
   return (
     <>
       {needValue ? (
         <GetInput onSubmit={handleSubmit}></GetInput>
       ) : (
         <>
-          <p style={{ fontSize: 40 }}>{size}</p>
-          {res.map((column) => {
-            let strings = column.map((i) => {
-              return spaceChar(i.toString(), (size * size).toString().length);
-            });
-            return <p>{strings.join(" ")}</p>;
-          })}
+          <p style={{ fontSize: 40, color: "rgb(165, 114, 165)" }}>{size}</p>
+          <Grid data={res}></Grid>
         </>
       )}
     </>

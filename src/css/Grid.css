@@ -1,0 +1,13 @@
+.grid-cell {
+  border: 1px solid grey;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  color: rgb(165, 114, 165);
+  font-weight: bold;
+}
