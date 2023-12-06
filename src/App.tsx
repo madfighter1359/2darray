@@ -58,13 +58,10 @@ function App() {
       const response = await axios({
         url: "http://localhost/phptests/genNumber.php",
         method: "post",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        data: {
-          min: 1,
-          max: 3,
-        },
+        data: new URLSearchParams({
+          min: "1",
+          max: "2",
+        }),
       });
       return response.data;
     } catch (e) {
