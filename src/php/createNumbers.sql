@@ -1,4 +1,4 @@
-DROP DATABASE numbers;
+DROP DATABASE IF EXISTS numbers;
 CREATE DATABASE numbers;
 USE numbers;
 CREATE TABLE integers (
